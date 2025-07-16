@@ -1,0 +1,36 @@
+public class CellPhone {
+    // Fields
+    public String model;
+    public String[] contacts;
+    public int contactCount;
+    
+    // Default constructor
+    public CellPhone() {
+        this.model = "unknown";
+        this.contacts = new String[3];
+        this.contactCount = 0;
+    }
+    
+    // Method to store a contact
+    public void storeContact(String contact) {
+        if (contactCount < 3) {
+            contacts[contactCount] = contact;
+            contactCount++;
+            System.out.println("Contact Stored");
+        } else {
+            System.out.println("Memory full. New contact can't be stored.");
+        }
+    }
+    
+    // Method to print phone details
+    public void printDetails() {
+        System.out.println("Phone Model " + model);
+        System.out.println("Contacts Stored " + contactCount);
+        if (contactCount > 0) {
+            System.out.println("Stored Contacts:");
+            for (int i = 0; i < contactCount; i++) {
+                System.out.println(contacts[i]);
+            }
+        }
+    }
+}

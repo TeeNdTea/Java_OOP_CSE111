@@ -1,0 +1,15 @@
+public class ImaginaryNumber {
+    public int realPart;
+    public int imaginaryPart;
+
+    // Constructor
+    public ImaginaryNumber() {
+        this.realPart = 0;
+        this.imaginaryPart = 0;
+    }
+
+    // Method to print the imaginary number
+    public void printNumber() {
+        System.out.println(this.realPart + " + " + this.imaginaryPart + "i");
+    }
+}
