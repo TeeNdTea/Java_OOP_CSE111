@@ -1,0 +1,15 @@
+public class Cat {
+    public String color;
+    public String action;
+
+    // Constructor
+    public Cat() {
+        this.color = "White";
+        this.action = "sitting";
+    }
+
+    // Method to print cat details
+    public void printCat() {
+        System.out.println(this.color + " cat is " + this.action);
+    }
+}
