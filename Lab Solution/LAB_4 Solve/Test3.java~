@@ -1,0 +1,13 @@
+public class Test3 {
+    public static void main(String[] args) {
+        Circle circle = new Circle();
+        double radius = circle.radius;
+        System.out.println("Radius of the circle is " + radius);
+        
+        double area = 3.141592653589793 * radius * radius;
+        System.out.println("The area of the circle is " + area);
+        
+        double circumference = 2 * 3.141592653589793 * radius;
+        System.out.println("The circumference of the circle is " + circumference);
+    }
+}
