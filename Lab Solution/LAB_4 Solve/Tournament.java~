@@ -1,0 +1,14 @@
+public class Tournament {
+    public String name;
+    public String sportsType;
+    public int numberOfTeams;
+    public String[] teams;
+
+    // Constructor
+    public Tournament() {
+        this.name = null;
+        this.sportsType = null;
+        this.numberOfTeams = 0;
+        this.teams = null;
+    }
+}

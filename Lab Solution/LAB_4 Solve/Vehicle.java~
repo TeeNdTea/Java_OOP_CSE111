@@ -1,0 +1,12 @@
+public class Vehicle {
+    public String type;
+    public int wheels;
+    public String color;
+
+    // Constructor
+    public Vehicle() {
+        this.type = "Car";
+        this.wheels = 4;
+        this.color = "White";
+    }
+}
