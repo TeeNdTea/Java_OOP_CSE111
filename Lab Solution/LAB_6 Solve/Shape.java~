@@ -1,0 +1,29 @@
+public class Shape {
+    public String shapeName;
+    public double area;
+
+    public void setCircleParameters(String name, double radius) {
+        shapeName = name;
+        if (name == "Circle") {
+            area = 3.1415 * radius * radius;
+        }
+    }
+
+    public void setTriangleParameters(String name, double base, double height) {
+        shapeName = name;
+        if (name == "Triangle") {
+            area = 0.5 * base * height;
+        }
+    }
+
+    public void setTrapeziumParameters(String name, double a, double b, double height) {
+        shapeName = name;
+        if (name == "Trapezium") {
+            area = 0.5 * (a + b) * height;
+        }
+    }
+
+    public String details() {
+        return "Shape Name: " + shapeName + "\nArea: " + String.format("%.2f", area);
+    }
+}

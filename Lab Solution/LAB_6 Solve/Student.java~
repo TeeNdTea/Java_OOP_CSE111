@@ -1,0 +1,31 @@
+public class Student {
+    // Instance variables
+    String name;
+    String prog;
+
+    // Constructor
+    public Student(String name, String prog) {
+        this.name = name;
+        this.prog = prog;
+    }
+
+    // Method to update the name
+    public void updateName(String newName) {
+        this.name = newName;
+    }
+
+    // Method to access the name
+    public String accessName() {
+        return this.name;
+    }
+
+    // Method to update the program
+    public void updateProgram(String newProg) {
+        this.prog = newProg;
+    }
+
+    // Method to access the program
+    public String accessProgram() {
+        return this.prog;
+    }
+}
