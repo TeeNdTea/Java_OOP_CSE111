@@ -1,0 +1,56 @@
+public class Course {
+    public String courseName;
+    public String courseCode;
+    public String[] syllabus;
+    public int contentCount;
+
+    public Course() {
+        syllabus = new String[4]; // Maximum of 4 contents
+        contentCount = 0; // Start with 0 content
+    }
+
+    public void createCourse(String name, String code) {
+        courseName = name;
+        courseCode = code;
+    }
+
+    public void addOneContent(String content) {
+        if (contentCount < 4) {
+            syllabus[contentCount] = content;
+            contentCount++;
+            System.out.println(content + " was added.");
+        } else {
+            System.out.println("Cannot add more content");
+        }
+    }
+
+    public void addTwoContent(String content1, String content2) {
+        if (contentCount < 4) {
+            addOneContent(content1); // Reuse the addOneContent method
+        }
+        if (contentCount < 4) {
+            addOneContent(content2); // Reuse the addOneContent method
+        }
+        if (contentCount >= 4) {
+            System.out.println("Cannot add more content");
+        }
+    }
+
+    public void printDetails() {
+        System.out.println("Course details:");
+        System.out.println("Course Name: " + courseName);
+        System.out.println("Course Code: " + courseCode);
+        System.out.print("Course Syllabus: ");
+        if (contentCount == 0) {
+            System.out.println("\nNo content yet.");
+        } else {
+            for (int i = 0; i < contentCount; i++) {
+                System.out.print(syllabus[i]);
+                if (i < contentCount - 1) {
+                    System.out.print(", ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
