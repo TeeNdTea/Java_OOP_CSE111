@@ -1,0 +1,55 @@
+public class LightController {
+    public boolean isOn;
+    public int brightness;
+
+    public LightController() {
+        isOn = false;
+        brightness = 0;
+    }
+
+    public void switchLight() {
+        if (isOn) {
+            isOn = false;
+            brightness = 0;  // Set brightness to 0 when turning off
+            System.out.println("Lights are now OFF.");
+        } else {
+            isOn = true;
+            brightness = 1;  // Set brightness to 1 when turning on
+            System.out.println("Lights are now ON.");
+        }
+    }
+
+    public void adjustBrightness(int value) {
+        if (!isOn) {
+            System.out.println("Please turn on the light first!");
+            return;
+        }
+
+        int newBrightness = brightness + value;
+        if (newBrightness < 0 || newBrightness > 10) {
+            System.out.println("Brightness out of range. Set between 0 to 10.");
+        } else {
+            brightness = newBrightness;
+            System.out.println("Brightness adjusted.");
+        }
+    }
+
+    public void showLightStatus() {
+        System.out.println("Light status: " + getLightStatus());
+        System.out.println("Brightness Level: " + brightness);
+    }
+
+    public String resetSettings() {
+        isOn = true;         // Reset to ON
+        brightness = 1;      // Reset brightness to 1
+        return "Light settings have been reset.";
+    }
+
+    public String getLightStatus() {
+        if (isOn) {
+            return "ON";
+        } else {
+            return "OFF";
+        }
+    }
+}
