@@ -1,0 +1,47 @@
+public class Parcel {
+    String name;
+    int weight;
+    double totalFee;
+    public Parcel() {
+        this.name = "Set name first";
+        this.weight = 0;
+        this.totalFee = 0.0;
+    }
+    public Parcel(String name) {
+        this.name = name;
+        this.weight = 0;
+        this.totalFee = 0.0;
+        System.out.println("A new parcel has been created!");
+    }
+    public Parcel(String name, int weight) {
+        this.name = name;
+        this.weight = weight;
+        this.totalFee = 0.0;
+        System.out.println("A new parcel has been created!");
+    }
+   public void calcFee(String location) {
+    int locationCharge;
+    if (location.equals("Dhanmondi")) {
+        locationCharge = 50;
+    } 
+    else {
+        locationCharge = 0;
+    }
+    
+    if (this.weight == 0) {
+        this.totalFee = 0.0;
+    } 
+    else {
+        this.totalFee = (this.weight * 20) + locationCharge;
+    }
+}
+    public void addWeight(int additionalWeight) {
+        this.weight += additionalWeight;
+        System.out.println("Updated Weight: " + this.weight);
+    }
+    public void printDetails() {
+        System.out.println("Name: " + this.name);
+        System.out.println("Total Weight: " + this.weight);
+        System.out.println("Total Fee: " + this.totalFee);
+    }
+}
